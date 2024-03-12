@@ -55,9 +55,9 @@ function displayBooks() {
         
         row.innerHTML = `
             <td>${book.title}</td>
-            <td>${book.author}</td>
-            <td>${book.pages}</td>
-            <td>${book.read}</td>
+            <td>By: ${book.author}</td>
+            <td>${book.pages} pages</td>
+            <td>Finished: ${book.read}</td>
             
         `;
         

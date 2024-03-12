@@ -4,7 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body {
+  height: 100vh;
+  background-image: url(background.jpg);
+}
 table {
   border-collapse: collapse;
   border: 2px solid rgb(200,200,200);
@@ -85,4 +88,21 @@ form div {
   border: none;
   cursor: pointer;
   font-size: 18px;
+}
+
+.card {
+  height: 300px;
+  width: 10vw;
+  background-color: white;
+  text-align: start;
+  padding: 30px;
+}
+p {
+  margin-top: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
 }
