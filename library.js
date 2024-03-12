@@ -2,6 +2,11 @@ const myLibrary = [];
 const bookForm = document.querySelector("#submitBtn");
 const table = document.querySelector("#table")
 const buttons = document.querySelectorAll("button");
+const addBookBtn = document.querySelector("#addBook");
+const dialog = document.querySelector("#formDialog");
+
+
+addBookBtn.addEventListener("click", () => dialog.showModal())
 
 function Book(title, author, pages, status) {
     this.title = title;
@@ -80,6 +85,7 @@ function displayBooks() {
         table.appendChild(row);
         table.appendChild(deleteButton);
         table.appendChild(updateReadBtn)
+        dialog.close()
     });
         
 }
