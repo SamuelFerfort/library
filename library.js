@@ -51,13 +51,13 @@ function displayBooks() {
 
     myLibrary.forEach((book, index) => {
         const row = document.createElement("tr");
-        
+        const td = document.createElement("td");
         
         row.innerHTML = `
             <td>${book.title}</td>
-            <td>By: ${book.author}</td>
-            <td>${book.pages} pages</td>
-            <td>Finished: ${book.read}</td>
+            <td>${book.author}</td>
+            <td>${book.pages}</td>
+            <td>${book.read}</td>
             
         `;
         
@@ -83,8 +83,8 @@ function displayBooks() {
         })
 
         table.appendChild(row);
-        table.appendChild(deleteButton);
-        table.appendChild(updateReadBtn)
+        row.appendChild(deleteButton);
+        row.appendChild(updateReadBtn)
         dialog.close()
     });
         

@@ -1,0 +1,72 @@
+body {
+    height: 100vh;
+    background-image: url(background.jpg);
+    display: flex;
+    flex-direction: column;
+
+  }
+  header {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+  table {
+    color: #333; /* Text color */
+    font-size: 18px;
+    margin: 100px auto; /* Adjusted margin for better centering */
+    border-collapse: collapse; /* Collapse border spacing */
+    width: 80%; /* Adjust table width as needed */
+  }
+  
+  th, td {
+    padding: 15px; /* Padding for cells */
+    text-align: center; /* Center-align text */
+  }
+  
+  th {
+    background-color: #007bff; /* Header background color */
+    color: #fff; /* Header text color */
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* Even row background color */
+  }
+  
+  caption {
+    padding: 10px;
+  }
+  
+  tfoot {
+    font-weight: bold;
+  }
+  
+  .text input {
+    height: 40px; /* Adjust input height */
+    border-radius: 20px; /* Rounded input corners */
+    padding: 10px 20px; /* Adjust input padding */
+    background-color: #f8f9fa; /* Input background color */
+    border: 1px solid #ccc; /* Input border */
+  }
+  
+  .text label {
+    display: block;
+    margin-bottom: 5px; /* Adjust label spacing */
+  }
+  
+  form {
+    font-size: 18px;
+    margin-top: 20px; /* Adjust form margin */
+  }
+  
+  #submitBtn {
+    margin: 20px 0;
+    padding: 12px 30px; /* Adjust button padding */
+    border-radius: 25px; /* Rounded button corners */
+    background-color: #28a745; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
