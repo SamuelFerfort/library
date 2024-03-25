@@ -8,13 +8,16 @@ const dialog = document.querySelector("#formDialog");
 addBookBtn.addEventListener("click", () => dialog.showModal());
 
 class Book {
-    constructor(title, author, pages, readStatus){
-      this.title = title;
-      this.author = author;
-      this.pages = pages;
-      this.read = readStatus === "yes" ? "yes" : "no";
-    }
-    
+  constructor(title, author, pages, status) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = status === "yes" ? "yes" : "no";
+  }
+  changeReadStatus() {
+    this.read = this.read === "yes" ? "no" : "yes";
+    displayBooks();
+  }
 }
 
 function addBookToLibrary(e) {
@@ -67,14 +70,8 @@ function displayBooks() {
     updateReadBtn.textContent = "Status";
 
     updateReadBtn.addEventListener("click", () => {
-      if (book.read == "yes") {
-        book.read = "no";
-      } else {
-        book.read = "yes";
-      }
-      displayBooks();
+      book.changeReadStatus();
     });
-
     table.appendChild(row);
     row.appendChild(deleteButton);
     row.appendChild(updateReadBtn);
