@@ -14,8 +14,14 @@ table {
   color: #fff;
   letter-spacing: 1px;
   font-size: 40px;
-  margin: 0px 550px;
+  margin: 0px auto;
   border-collapse: collapse;
+}
+th:nth-child(1) {
+  width: 30% !important; /* Adjust title column to allow more space */
+}
+th:nth-child(2) {
+  width: 25% !important; /* Adjust title column to allow more space */
 }
 
 th {
@@ -47,9 +53,7 @@ button {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-caption {
-  padding: 10px;
-}
+
 tbody {
   font-size: 95%;
   font-style: italic;
@@ -64,7 +68,9 @@ dialog {
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
-
+caption {
+  padding: 10px;
+}
 .text input {
   height: 28px;
   border-radius: 15px;
@@ -123,10 +129,7 @@ form div {
   transform: translateY(-2px);
 }
 
-.cardContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
+
 #addBook:hover {
   background-color: #32408f;
 }
