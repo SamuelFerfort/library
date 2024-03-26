@@ -1,39 +1,51 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-  height: 100vh;
-  background-image: url(background.jpg);
-  
+  background: linear-gradient(to bottom right, #4e54c8, #8f94fb);
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
 }
 table {
-  color: white;
+  color: #fff;
   letter-spacing: 1px;
   font-size: 40px;
-  margin: 100px auto;
-  
+  margin: 0px 550px;
+  border-collapse: collapse;
 }
 
-td, th {
-  
+th {
+  background: linear-gradient(to bottom, #4e54c8, #8f94fb);
   padding: 30px;
-  
-  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+tbody {
+  font-size: 80%;
+  font-style: italic;
+}
+td {
+  padding: 20px;
+}
+td,
+th {
+  color: #fff;
   text-align: center;
 }
 
-
 button {
-  font-size: 35px;
+  font-size: 15px;
   font-weight: bold;
-  padding: 10px 20px;
-  margin-right: 20px;
-  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: #4e54c8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 caption {
   padding: 10px;
@@ -43,54 +55,99 @@ tbody {
   font-style: italic;
 }
 
-tfoot {
-  font-weight: bold;
-}
-
 dialog {
-    margin: 200px auto;
-    outline: none;
-    border: 1px solid #000000;
-    border-radius: 4px;
-    padding: 20px;
+  margin: 200px auto;
+  outline: none;
+  border-radius: 12px;
+  padding: 40px;
+
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .text input {
-
   height: 28px;
   border-radius: 15px;
   padding: 5px 10px;
   background-color: lightgrey;
-
-  
-
 }
 .text label {
   display: block;
+  margin-top: 15px;
 }
 form {
   font-size: 18px;
 }
 form div {
-  margin-top: 10px;
+  margin-top: 15px;
 }
-
-
-
+#submitBtn {
+  margin: 10px auto;
+  font-size: 20px;
+  padding: 8px 15px;
+  border-radius: 12px;
+  background-color: #1976d2; /* Submit button color */
+  color: #ffffff;
+  cursor: pointer;
+}
+.realHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  height: 100px;
+  font-weight: bold;
+  font-size: 50px;
+}
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   height: 100px;
 }
 
 #addBook {
- 
-    font-size: 28px;
-    font-weight: bold;
-    padding: 10px 20px;
-    margin-right: 20px;
-    margin-top: 15px;
-  
+  font-size: 28px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+  background-color: #4e54c8;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transform: translateY(-2px);
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+#addBook:hover {
+  background-color: #32408f;
+}
+
+.green {
+  color: lightgreen;
+}
+
+.red {
+  color: #8b0000;
+}
+.red:hover,
+.green:hover {
+  background-color: #32408f;
+}
+.deleteBtn {
+  color: #8b0000;
+  font-size: 15px;
+}
+
+.deleteBtn:hover {
+  color: #6b0000;
+  background-color: #32408f; /* Slightly darker red on hover */
 }
