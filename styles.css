@@ -144,10 +144,17 @@ form div {
 }
 .deleteBtn {
   color: #8b0000;
-  font-size: 15px;
+  font-size: 18px;
+  border-radius: 50%;
 }
 
 .deleteBtn:hover {
   color: #6b0000;
   background-color: #32408f; /* Slightly darker red on hover */
+}
+
+.green,
+.red {
+  margin-left: 5px;
+  border-radius: 50%;
 }

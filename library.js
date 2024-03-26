@@ -58,7 +58,7 @@ class Library {
     this.books.forEach((book, index) => {
       const row = document.createElement("tr");
       const td = document.createElement("td");
-
+      const td2 = document.createElement("td");
       // Create a delete button using index
       const deleteButton = document.createElement("button");
       deleteButton.textContent = "X";
@@ -89,12 +89,14 @@ class Library {
               <td>${book.title}</td>
               <td>${book.author}</td>
               <td>${book.pages}</td>
-              <td>${book.read}</td>
               
           `;
+      console.log(book.read);
+      td2.innerHTML = book.read;
+      td2.appendChild(updateReadBtn);
       td.appendChild(deleteButton);
-      td.appendChild(updateReadBtn);
       table.appendChild(row);
+      row.appendChild(td2);
       row.appendChild(td);
     });
   }
