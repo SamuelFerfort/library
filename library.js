@@ -17,6 +17,7 @@ class LibraryApp {
       e.preventDefault();
       this.myLibrary.addBook();
       this.dialog.close();
+      this.bookForm.reset();
     });
   }
 }
@@ -58,17 +59,10 @@ class Library {
       const row = document.createElement("tr");
       const td = document.createElement("td");
 
-      row.innerHTML = `
-              <td>${book.title}</td>
-              <td>${book.author}</td>
-              <td>${book.pages}</td>
-              <td>${book.read}</td>
-              
-          `;
-
       // Create a delete button using index
       const deleteButton = document.createElement("button");
-      deleteButton.textContent = "Delete";
+      deleteButton.textContent = "X";
+      deleteButton.classList.add("deleteBtn");
       deleteButton.addEventListener("click", () => {
         this.books.splice(index, 1);
         this.displayBooks();
@@ -76,16 +70,32 @@ class Library {
 
       // Change read status button
       const updateReadBtn = document.createElement("button");
-      updateReadBtn.textContent = "Status";
+      updateReadBtn.innerHTML = "&#10003;";
 
+      // Add class depending on status
+      if (book.read == "yes") {
+        updateReadBtn.classList.add("green");
+      } else {
+        updateReadBtn.classList.add("red");
+      }
+      // Color toggle and status change
       updateReadBtn.addEventListener("click", () => {
         book.read = book.read === "yes" ? "no" : "yes";
         this.displayBooks();
+        updateReadBtn.classList.toggle("green");
+        updateReadBtn.classList.toggle("red");
       });
+      row.innerHTML = `
+              <td>${book.title}</td>
+              <td>${book.author}</td>
+              <td>${book.pages}</td>
+              <td>${book.read}</td>
+              
+          `;
+      td.appendChild(deleteButton);
+      td.appendChild(updateReadBtn);
       table.appendChild(row);
-      row.appendChild(deleteButton);
-      row.appendChild(updateReadBtn);
-      
+      row.appendChild(td);
     });
   }
 }
